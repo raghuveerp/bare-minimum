@@ -12,7 +12,7 @@
      * Special thanks to Internet Explorer here
      * @type {{promise: {state: string, then: Function}, resolve: Function, reject: Function}}
      */
-    var CustomPromise = {
+    var $promise = {
         promise: {
             state: 'pending',
             then: function (x, y) {
