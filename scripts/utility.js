@@ -9,18 +9,29 @@
  * @param array
  * @returns {Array}
  */
-var $unique = function (array) {
+var _unique = function (array) {
     var flags  = [],
-        output = [],
-        l      = array.length,
-        i;
-    for (i = 0; i < l; i++) {
-        if (flags[array[i].outerHTML]) {
+        output = [];
+    for (var i = 0; i < array.length; i++) {
+        if (flags[array[i]]) {
             continue;
         }
-        flags[array[i].outerHTML] = true;
+        flags[array[i]] = true;
         output.push(array[i]);
     }
 
     return output;
+};
+
+/**
+ * Utility class
+ * @returns {{unique: _unique}}
+ * @constructor
+ */
+var Utility = function () {
+
+    return {
+        unique: _unique
+    }
+
 };
