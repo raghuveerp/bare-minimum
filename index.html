@@ -8,11 +8,21 @@
     
     <script>
         var utility = Utility();
+        var url     = 'http://jsonplaceholder.typicode.com/posts';
         
+        utility.$http(url).get().then(function (data) {
+            var output = document.getElementById('output');
+            output.innerHTML = data;
+            
+        });
         
     </script>
 </head>
 <body>
+
+<div class="content">
+    <p id="output"></p>
+</div>
 
 </body>
 </html>
