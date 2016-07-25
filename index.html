@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>bare-minimum</title>
+    
+    <script src="scripts/utility.js" type="application/javascript"></script>
+    
+    <script>
+        var utility = Utility();
+        var url     = 'http://jsonplaceholder.typicode.com/posts';
+        
+        utility.$http(url).get().then(function (data) {
+            var output = document.getElementById('output');
+            output.innerHTML = data;
+            
+        });
+        
+    </script>
+</head>
+<body>
+
+<div class="content">
+    <p id="output"></p>
+</div>
+
+</body>
+</html>
