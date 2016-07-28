@@ -3,26 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <title>bare-minimum</title>
-    
-    <script src="scripts/utility.js" type="application/javascript"></script>
-    
-    <script>
-        var utility = Utility();
-        var url     = 'http://jsonplaceholder.typicode.com/posts';
-        
-        utility.$http(url).get().then(function (data) {
-            var output = document.getElementById('output');
-            output.innerHTML = data;
-            
-        });
-        
-    </script>
 </head>
 <body>
 
-<div class="content">
-    <p id="output"></p>
+<div id="content">
+    <input type="button" value="Click Me!" id="click">
+    <input type="button" value="Clear!" id="clear">
+    <div id="output"></div>
 </div>
 
+
+    <script src="scripts/utility.js" type="application/javascript"></script>
+    <script src="scripts/main.js" type="application/javascript"></script>
 </body>
 </html>
